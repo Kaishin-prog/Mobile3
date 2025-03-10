@@ -50,34 +50,36 @@
                 width: 100%;
                 height: absolute;
             }
-            .controls, #physicsMeasurements {
+            .controls {
                 width: 25%;
                 left: 5%;
+                height: 15%;
                 top: 10px;
                 padding: 8px;
-                font-size: 0.9em;
             }
-            .controls button {
-                padding: 5px 5px;
-                margin: 5px;
-                font-size: 0.9em;
+            #physicsMeasurements {
+                width: 25%;
+                right: 5%;
+                height: 15%;
+                top: 10px;
+                padding: 8px;
             }
         }
         @media (max-width: 768px) {
             canvas {
                 width: 40%;
             }
-            .controls, #physicsMeasurements {
+            .controls {
                 width: 35%;
                 left: 0;
                 top: 10px;
                 padding: 6px;
-                font-size: 0.8em;
             }
-            .controls button {
-                padding: 4px 4px;
-                margin: 4px;
-                font-size: 0.8em;
+            #physicsMeasurements {
+                width: 35%;
+                right: 0;
+                top: 10px;
+                padding: 6px;
             }
         }
         @media (max-width: 480px) {
@@ -85,17 +87,17 @@
                 width: 100%;
                 height: auto;
             }
-            .controls, #physicsMeasurements {
+            .controls {
                 width: 90%;
                 left: 5%;
                 top: 10px;
                 padding: 4px;
-                font-size: 0.7em;
             }
-            .controls button {
-                padding: 3px 3px;
-                margin: 3px;
-                font-size: 0.7em;
+            #physicsMeasurements {
+                width: 90%;
+                right: 5%;
+                top: 10px;
+                padding: 4px;
             }
         }
     </style>
