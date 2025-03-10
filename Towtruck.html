@@ -14,17 +14,18 @@
         }
         .controls {
             text-align: center;
+            font-size: small;
             margin: 10px;
             position: fixed;
             top: 20px;
             left: 60px;
             background-color: rgba(135, 206, 235, 0.5); /* Changed to transparent skyblue */
-            padding: 15px;
+            padding: 5px;
             border-radius: 4px;
             z-index: 1;
         }
         .input-group {
-            margin: 10px;
+            margin: 5px;
             padding: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -54,11 +55,22 @@
                 width: 60%;
                 left: 5%;
                 top: 5px;
+                padding: 8px;
             }
             #physicsMeasurements {
                 right: 5%;
                 height: 30%;
                 top: 10px;
+                background: rgba(255,255,255,0.9); /* Ensure background is not white */
+            }
+            .controls-buttons {
+                display: flex;
+                flex-direction: column; /* Stack buttons vertically */
+                align-items: center;
+                margin-top: 10px;
+            }
+            .controls-buttons button:first-child {
+                margin-bottom: 10px; /* Add space between buttons */
             }
         }
         @media (max-width: 768px) {
@@ -70,10 +82,21 @@
                 width: 60%;
                 left: 0;
                 top: 5px;
+                padding: 6px;
             }
             #physicsMeasurements {
                 right: 0;
                 top: 10px;
+                background: rgba(255,255,255,0.9); /* Ensure background is not white */
+            }
+            .controls-buttons {
+                display: flex;
+                flex-direction: column; /* Stack buttons vertically */
+                align-items: center;
+                margin-top: 10px;
+            }
+            .controls-buttons button:first-child {
+                margin-bottom: 10px; /* Add space between buttons */
             }
         }
         @media (max-width: 480px) {
@@ -91,6 +114,16 @@
                 right: 0;
                 top: 10px;
                 padding: 10px;
+                background: rgba(255,255,255,0.9); /* Ensure background is not white */
+            }
+            .controls-buttons {
+                display: flex;
+                flex-direction: column; /* Stack buttons vertically */
+                align-items: center;
+                margin-top: 10px;
+            }
+            .controls-buttons button:first-child {
+                margin-bottom: 10px; /* Add space between buttons */
             }
         }
     </style>
@@ -156,9 +189,10 @@
             <label>Car Mass (kg): <span id="carMassValue">250</span></label>
             <input type="range" id="carMass" min="250" max="3000" value="0">
         </div>
-        
-        <button onclick="startTowing()" style="padding: 10px 10px; margin: 10px;">Start Towing!</button>
-        <button id="toggleCarButton" onclick="toggleCar()" style="padding: 10px 10px; margin: 5px;">Remove Car</button>
+        <div class="controls-buttons">
+            <button onclick="startTowing()" style="padding: 5px 5px; margin: 5px;">Start Towing!</button>
+            <button id="toggleCarButton" onclick="toggleCar()" style="padding: 5px 5px; margin: 5px;">Remove Car</button>
+        </div>
     </div>
     <canvas id="gameCanvas" width="800" height="400"></canvas>
 
